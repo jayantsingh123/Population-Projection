@@ -7,9 +7,9 @@ output:
 
   
 
-#Exploratory Analysis For Population Projection Data
+# Exploratory Analysis For Population Projection Data
   
-##Introduction
+## Introduction
   
  The Population Projections Program produces projections of the United States resident population by age, sex, race, and Hispanic origin. The 2012 National Projections are based on the July 1, 2011 population estimates, which are based on the 2010 Census, and provide projections of the population for July 1, 2012 to July 1, 2060. The projections were produced using a cohort-component method and are based on assumptions about future births, deaths, and net international migration. The Census Bureau releases new national projections periodically. Please refer to  
  https://www.census.gov/data/datasets/2012/demo/popproj/2012-popproj.html for details.
@@ -98,9 +98,9 @@ In the dataset, ```  population_gender_races7_11 ``` we have population data for
 From the graph, we observe that the male population is closely following the female population and almost coincide at year 2060. Notice that this estimate is independent of origin/ethnicity as well as race. 
 After conducting preliminary analysis, it is time to deep dive to find more trends. To begin with, we observe at the population trend based on race.
 
-###Population Trend As Per Race
+### Population Trend As Per Race
 
-####Population Trend for White & Black People
+#### Population Trend for White & Black People
 First, we analyze popuation behavior for White as well as Black population(``` RACE=1 or 2 ```), grouped by gender.
 
 
@@ -125,7 +125,7 @@ This graph is loaded with interesting findings. First, population of Hispanic bl
 
 Next, we look at the population trend for American Indians and Natives.
 
-####Population trend for American Indians and Alaskan Natives(AIAN)
+#### Population trend for American Indians and Alaskan Natives(AIAN)
 To begin with, we filter the dataset based on ``` Race=3 ``` and plot the overall trend of AIAN population.
 
 
@@ -161,7 +161,7 @@ It is easy to see that male population is leading causing a significant gender g
 <img src="projection_files/figure-html/AIAN Population across Origin-1.png" style="display: block; margin: auto;" />
 It is easy to notice that Non-Hispanic population for AIAN is increasing at a much slower rate compared to their Hispanic counterparts. Moreover, the Hispanic population is projected to be around 1.75 millions, significantly higher than their Non-Hispanic counterparts; 1.50 millions. This significant difference can be attributed to the lower fertility rates for Non-Hispanic population as presented in page 18 of accompanying pdf document, https://www2.census.gov/programs-surveys/popproj/technical-documentation/methodology/methodstatement12.pdf. As a short blurb, the female population for Non-Hispanic exceed the male population, contrary to the behaviour for Hispanic population. Next, we perform similar analysis for Asian population.
 
-####Population trend for Asian population
+#### Population trend for Asian population
 
 First, we look at the overall trend for people of Asian origin. We filter required values and define a new variable, ``` population_race_4 ```.
 
@@ -176,7 +176,7 @@ Next, we obtain the population trend for Asians across gender and origin.
 
 The above figure suggests that the Hispanic proportion of Asian population in the country is negligible. In addition, asian females highly outnumber their male counterparts throughout the period 2012-2060. We will end this section with analysis of population trend for Native Hawaiians or Pacific Islanders (NHPI).
 
-####Population trend for NHPI
+#### Population trend for NHPI
 
 Similar to above cases, we filter the dataset based on ``` Race=5 ``` to obtain the variable, ``` population_race_5 ```.
 
@@ -192,7 +192,7 @@ Population for Hispanic NHPI is negligible,  suggesting that majority of NHPI ar
 We analyzed expected population trends for individual races in the period 2012 through 2060. Population of Hispanic as well as their Non-Hispanic counterparts  have been compared for individual race. Next, it will be interesting to compare the population growth rate across races,
 irrespective of gender and origin.
 
-###Projected Population Growth Rate Through the Period 2012- 2060
+### Projected Population Growth Rate Through the Period 2012- 2060
 
 First, we do some basic preprocessing and store the data in the variable, ``` population_race_1_5 ```. 
 
@@ -225,7 +225,7 @@ First, growth rate for both genders are almost identical for each race. Second, 
 
 As a recap, we analyzed the population growth rate for different races. It should be noted that White population is expected to rise at mere 0.25 percnet by year 2060, which is the lowest, followed by the Black population. On the other hand, the Asian population will increase significantly by 2060, recording a growth rate of 1 percent. Overall the growth rate is decreasing across each race. Next, it will be worthwhile to observe the population trend for different age groups across various races.
 
-###Comparison of Projected Population Across Different Age groups
+### Comparison of Projected Population Across Different Age groups
 For this section, we work with the original dataset, ``` population_proj_2012 ```. To begin with, we classify the population into different age groups. For convenience, we define new variables corresponding to following age groups;
 
 * Kids (Age 1 through 12)
@@ -241,7 +241,7 @@ We select following columns of interest; Origin,Sex,Race,Year,Total population, 
 
 
 
-####Variation in Kids Percent of the Total Population
+#### Variation in Kids Percent of the Total Population
 
 First, we observe the change in kids population vs. time across different races ( 1 through 5), irrespective of gender and origin.
 
@@ -262,7 +262,7 @@ Next, we examine similar data for Hispanic population. The processed data is sto
 We can deduce following from the above plot. First, for Hispanic population, the highest child percentage is in the ```Black``` population. It is followed by ```Asian``` population initially. Around the year 2035, the child percentage is same for ```Black``` as well as ```Asian``` population for Hispanic origin. Second, the child percentage in ```White``` population is the lowest for both Hispanic as well as Non-Hispanic.
 Next, we perform similar analysis for the teenager percentage across all races.
 
-####Variation in Teenager Percent of the Total Population
+#### Variation in Teenager Percent of the Total Population
 
 We observe the change in teenager population vs. time across different races (1 through 5), irrespective of gender and origin.
 
@@ -282,7 +282,7 @@ Next, we examine the behavior of teenager population for Hispanic groups. The pr
 
 The Hispanic population exhibits an interesting trend. Identical behavior is displayed by the teenage population for races; ```Black```, ```Asian``` and ```NHPI```. Through years 2017 to 2030, the population for these 3 races is increasing, followed by steady decline. Moreover, for Hispanic population, ```Asian``` teenagers are projected to constitute the highest percentage in the year 2060.
 
-####Variation in Youth Percent of the Total Population
+#### Variation in Youth Percent of the Total Population
 
 First, we observe trend for Youth population for races 1 through 5, irrespective of sex and origin.
 
@@ -317,7 +317,7 @@ For the Hispanic population, following trends are observed;
 
 For the Non-Hispanic population, the ```AIAN``` group records the highest youth percentage, followed by ```NHPI``` and ```Black```, which are comparatively close. It should be noted that ```White``` population exhibits the lowest youth percentage throughout the period 2012-2060.
 
-####Variation of Middle Aged Population Throughout the Period 2012-2060
+#### Variation of Middle Aged Population Throughout the Period 2012-2060
 
 First, we analyze the population for middle aged irrespective of sex and origin.
 
@@ -337,7 +337,7 @@ First, we analyze the population for middle aged irrespective of sex and origin.
 First, the ```Asian``` population shows oposite behavior for Hispanic and Non-Hispanic population. For the Non-Hispanic population, middle aged population for ```Asian``` race is the highest, whereas for Non-Hispanic, ```Asian``` records one of the lowest middle aged population. Next, the ```White``` race also exhibits  interesting behavior.  For the Non-Hispanic population, the ```White``` race records quite high middle aged population, but then declines significantly and middle aged population is the lowest among all the races. However, for the Hispanic population, the middle aged proportion for ```White``` stays relatively constant. Third, for the ```NHPI``` race, the middle aged population is increasing till 2025 followed by decline. This behavior is observed for Hispanic as well as Non-Hispanic population.
 
 
-####Variation of Older Population Throughout the Period 2012-2060
+#### Variation of Older Population Throughout the Period 2012-2060
 
 First, we analyze the population for older irrespective of sex and origin.
 
@@ -357,7 +357,7 @@ Next, we examine the trend for Hispanic group.
 
 For the Hispanic population, the elderly percent is comparable across  all races and stays consistent throughout the entire period. But for Non-Hispanic population, elderly population for the ```White``` race is significantly higher as compared to other races.
 
-###Comparing Population of Different Age Groups Across Races
+### Comparing Population of Different Age Groups Across Races
  Presently, we have different columns corresponding to different age groups. First, we need to subset the data, and use reshaping(i.e. melting) to get the population values in one column.
 
 
@@ -375,50 +375,50 @@ Next, we recode the ```RACE ``` variable, and define a new dataset,```population
 <img src="projection_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" />
 First, it is easy to notice that the line graph corresponding to Teenagers population is missing in the graph. Upon careful observation, we found that teenagers percent is same as youth percent, hence gets overwritten. Second, percentage of older people is projected to increase for every race. Remaining age groups are projected to decrease across each race. It is the highest for white people, expected to reach close to 30 percent by 2060. It is an indication that white population is projected to age faster.  Third, for each race, middle age population is projected to be the highest among all age groups. This can be attributed to decrease in young poulation.
 
-###Summary
-####Overall Population Analysis
+### Summary
+#### Overall Population Analysis
 First, we observed population increase in the range 2012-2060. We observe that the male population is closely following the female population and almost coincide at year 2060. Moreover, the population is increasing linearly.
 
-####Population Analysis Across Races
+#### Population Analysis Across Races
 
-#####White vs. Black Race 
+##### White vs. Black Race 
 
 First, population of Hispanic blacks is negligible as compared to their white counterparts. Second, the population of Hispanic Blacks stays almost constant for each gender. On the other hand, the population of Hispanic white is on rise, for both genders. Interestingly, the rate of increase for males is slighly greater than their female counterparts.  At the same time, Non Hispanic white population is projected to decrease rapidly. This behavior is expected for each gender. Moreover, the Non-Hispanic Blacks show linear but slow increase across both genders.
 
-#####AIAN Race
+##### AIAN Race
 
 The Non-Hispanic population for AIAN is increasing at a much slower rate compared to their Hispanic counterparts. Moreover, the Hispanic population is projected to increase from 0.75 millions to 1.75 millions at the end of the period, significantly higher than their Non-Hispanic counterparts; 1.50 millions. As a short blurb, the female population for Non-Hispanic exceed the male population, contrary to the behaviour for Hispanic population. 
 
-#####Asian Race
+##### Asian Race
 
 The Hispanic proportion of Asian population in the country is negligible. But for Non-Hispanic group, the population is rising linearly for each gender. In addition, asian females highly outnumber their male counterparts in the Hispanic group. 
 
-#####NHPI Race
+##### NHPI Race
 
 Population for Hispanic NHPI is significantly less as compared to the Non-Hispanic group. Around the year 2030, the male population is expected to coincide with female population for Non-Hispanic NHPI.
 
-####Projected Population Growth Rate 
+#### Projected Population Growth Rate 
 
 The population growth rate is projected to decrease for each race. The projected growth rate is lowest for White populaton. By the year 2060, this growth rate is projected to decline till 0.25 percent. On the other hand, due to increase in rate of immigration, Asian population is projected to increase at the highest rate. Their projected growth rate is decreasing but is significantly higher than other races throughout the period 2012-2060. Moreover the growth rate across genders is projected to be relatively identical for each race.
 
-####Variation of Different Age Groups Across Races
+#### Variation of Different Age Groups Across Races
 
-#####Variation of Kids Percent
+##### Variation of Kids Percent
 
 The kids percent is decreasing for each race. For Hispanic group, kids percent is the highest for Black people. This is followed by Asian population. Moreover, kids percentsge is projected to be the lowest for White race, for both Hispanic as well as Non-Hispanic.
 
-#####Variation of Teenager Percent
+##### Variation of Teenager Percent
 
 The variation of Teenagers percent is highly oscillatory for each race. Identical behavior is displayed by the teenage population for races; Black, Asian and NHPI. Through years 2017 to 2030, the population for these 3 races is increasing, followed by steady decline. For Hispanic group, teenagers percent is highest for Black people. On the other hand, for Non-Hispanic group, AIAN is project to register the highest percentage of teenagers. Moreover, White is projected to register lowest Teenager percent for Hispanic as well as Non-Hispanic.
 
-#####Variation of Youth Percent
+##### Variation of Youth Percent
 
 For the Hispanic group, youth percentage is projected to be the highest for Black population. Next, for Non-Hispanic group, youth percentage is projected to be highest for AIAN. On the other hand, youth percentage is lowest for White group for Hispanic as well as Non-Hispanic population.  
 
-#####Variation of Middle Aged Percent
+##### Variation of Middle Aged Percent
 
 For Non-Hispanic group, middle aged percent is projected to be the highest for Asian. But for Hispanic group, Asian race is projected to have the lowest Middle Aged population. Next, for Hispanic group, White is projected to have highest percentage of Middle Age population. And, for Non-Hispanic group, the lowest percentage of Middle Age population is observed for White race.
 
-#####Variation of Elderly People
+##### Variation of Elderly People
 
 For the Hispanic population, the elderly percent is comparable across all races and stays consistent throughout the entire period. But for Non-Hispanic population, elderly population for the White race is significantly higher as compared to other races. Overall the proportion of elder population is increasing for each race.
